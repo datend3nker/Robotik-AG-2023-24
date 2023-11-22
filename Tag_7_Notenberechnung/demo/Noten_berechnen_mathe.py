@@ -1,4 +1,4 @@
-def calculate_average(fächer):
+def calculate_average(fächer: dict) -> None:
     """
     Calculates the average grade for each subject based on the given grades and weights.
 

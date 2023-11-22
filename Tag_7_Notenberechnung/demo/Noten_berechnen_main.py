@@ -6,12 +6,13 @@ from Noten_berechnen_datei import save_subjects, load_subjects
 # Schritt 1: Erstelle ein Wörterbuch, um Fächer und Noten zu speichern
 fächer = load_subjects("fächer.pickle")  # Load subjects from file
 
-if not fächer:
-    fächer = get_subjects_and_grades()
 
-wahl = input("Möchten Sie weitere noten hinzufügen? (j/n) ")
-if wahl == "j":
-    fächer = get_subjects_and_grades(fächer)
+if fächer is None:
+    fächer = get_subjects_and_grades()
+else:
+    wahl = input("Möchten Sie weitere noten hinzufügen? (j/n) ")
+    if wahl == "j":
+        fächer = get_subjects_and_grades(fächer)
 
 # Schritt 3: Berechne den gewichteten Durchschnitt für jedes Fach
 calculate_average(fächer)
@@ -26,3 +27,4 @@ print(f"\nGesamtnote: {gesamtnote}")
 
 # Schritt 8: Fächer speichern
 save_subjects(fächer, "fächer.pickle")
+

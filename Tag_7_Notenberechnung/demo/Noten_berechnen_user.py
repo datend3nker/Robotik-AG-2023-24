@@ -1,4 +1,4 @@
-def get_subjects_and_grades(fächer: dict = None):
+def get_subjects_and_grades(fächer: dict = {})-> dict:
     """
     Diese Funktion fordert den Benutzer auf, die Anzahl der Fächer, ihre Namen, Notentypen und Gewichtungen einzugeben.
     Diese Informationen werden dann in einem Wörterbuch gespeichert und zurückgegeben.
@@ -9,7 +9,7 @@ def get_subjects_and_grades(fächer: dict = None):
     Returns:
         dict: Ein Wörterbuch, das die Informationen über die Fächer, Noten und Gewichtungen enthält.
     """
-    if fächer:
+    if fächer != {}:
         for fach in fächer:
             print(f"Das Fach {fach} hat folgende Notentypen: {fächer[fach]['notentypen']}")
             print(f"Das Fach {fach} hat folgende Gewichtungen: {fächer[fach]['gewichtungen']}")
