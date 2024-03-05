@@ -1,0 +1,112 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{positioning, arrows.meta}
+
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+
+\title{Python Temperature Conversion Functions}
+\author{Robotik AG}
+\date{\today}
+\maketitle
+
+\section*{Funktionen}
+
+\subsection*{Erklärung}
+
+Die Struktur einer Python-Funktion mit Docstring und Doctest sieht folgendermaßen aus:
+
+\begin{lstlisting}[language=Python]
+def function_name(parameter: parameter_type) -> return_type:
+    """
+    Description of the function.
+
+    Args:
+        parameter (parameter_type): Description of the parameter.
+
+    Returns:
+        return_type: Description of the return value.
+
+    Raises:
+        ExceptionType: Description of the exception (if any).
+
+    Examples:
+        >>> function_name(example_value)
+        expected_result
+    """
+    # Implementation of the function
+    # ...
+    pass
+\end{lstlisting}
+
+Hier sind die Erklärungen zu den verschiedenen Teilen:
+
+\begin{itemize}
+    \item \textbf{function\_name:} Der Name der Funktion.
+    \item \textbf{parameter:} Der Eingabeparameter der Funktion.
+    \item \textbf{parameter\_type:} Der Datentyp des Eingabeparameters.
+    \item \textbf{return\_type:} Der Datentyp des Rückgabewerts.
+    \item \textbf{Description of the function:} Eine kurze Beschreibung der Funktion und ihrer Aufgabe.
+    \item \textbf{Description of the parameter:} Eine kurze Beschreibung des Eingabeparameters.
+    \item \textbf{Description of the return value:} Eine kurze Beschreibung des Rückgabewerts.
+    \item \textbf{Raises:} Eine optionale Sektion, die Ausnahmen dokumentiert, die die Funktion auslösen kann.
+    \item \textbf{ExceptionType:} Der Typ der Ausnahme, wenn eine auftritt.
+    \item \textbf{Examples:} Beispiele, wie die Funktion verwendet werden kann, zusammen mit den erwarteten Ergebnissen.
+\end{itemize}
+
+\subsection*{Doctests: Verwendung und Bedeutung}
+
+\begin{itemize}
+    \item \textbf{Doctests} sind spezielle Kommentare in Python-Docstrings, die dazu dienen, Beispiele für die Verwendung der Funktion zu dokumentieren.
+    \item \textbf{Vorteile:} Doctests ermöglichen es, die Funktionen automatisch zu testen und sicherzustellen, dass sie wie erwartet funktionieren.
+    \item \textbf{Beispiel:} In den \texttt{Examples}-Sektionen sind Beispiele gegeben, wie die Funktion aufgerufen wird und welches Ergebnis erwartet wird.
+    \item \textbf{Ausführen:} Doctests können durch Ausführen des Python-Moduls mit dem Parameter \texttt{-m doctest} gestartet werden.
+\end{itemize}
+
+\subsection*{Umrechnungsformeln}
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black]
+    Dies kann dir sicher helfen.
+
+    Celsius = 5/9 * (Fahrenheit - 32).
+
+    Celsius = Kelvin - 273.15.
+
+    Die tiefste mögliche Temperatur ist den absoluten Nullpunkt 0K.
+
+  \end{tcolorbox}
+
+\subsection*{Aufgabe 1}
+Bitte vervollständige die Funktionen \texttt{celsius\_to\_fahrenheit}, \texttt{fahrenheit\_to\_celsius}, \texttt{celsius\_to\_kelvin}, \texttt{kelvin\_to\_celsius}, \texttt{fahrenheit\_to\_kelvin} und \texttt{kelvin\_to\_fahrenheit}.
+Du kannst sie in der Python-Datei \texttt{Temperaturen.py} speichern.
+\subsection*{Aufgabe 2}
+Schreibe ein Funktion \texttt{main}, die den Benutzer nach eingabe Temperatur fragt und sie dann in die gewünschte Temperatur umrechnet.
+ \section{Schleifen}
+\subsection*{Aufgabe 1}
+Vervollständige die Funktion \texttt{weihnachtsbaum} in \texttt{Schleifen.py} so, dass sie einen Weihnachtsbaum mit der gewünschten Anzahl von Ebenen und Sternen zeichnet.\\
+\textbf{Beispiel:}
+\begin{lstlisting}[language=Python]
+>>weihnachtsbaum(3):
+  *
+ ***
+*****
+\end{lstlisting}
+
+\subsection*{Aufgabe 2}
+Schreibe jeweils eine Funktion, die folgende Aufgaben erfüllt:
+\subsubsection*{a)}
+Berechne die Gesamtarbeitsstunden für die Woche.
+\subsection*{b)}
+Überprüfe, an welchem Tag die meisten Stunden gearbeitet wurden.
+\subsection*{c)}
+Überprüfe, ob der Schüler an jedem Tag mindestens 6 Stunden gearbeitet hat. Wenn ja, gib eine Nachricht aus, dass die Woche erfolgreich war, sonst eine Nachricht des Bedauerns.
+\subsection*{d)}
+Erstelle ein neues Dictionary, das die Arbeitsstunden pro Tag in Minuten enthält, wobei angenommen wird, dass 1 Stunde gleich 60 Minuten ist.
+\subsection*{e)}
+Füge einen neuen Arbeitstag hinzu und weise ihm 8 Stunden zu.
+\end{document}
+
