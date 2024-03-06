@@ -7,6 +7,23 @@ def weihnachtsbaum(hoehe: int) -> None:
 
     Returns:
     - None
+
+    Examples:
+    >>> weihnachtsbaum(1)
+    *
+    *
+
+    >>> weihnachtsbaum(3)
+      *
+     ***
+    *****
+
+    >>> weihnachtsbaum(5)
+        *
+       ***
+      *****
+     *******
+    *********
     """
     raise NotImplementedError("Implementiere die Funktion")
 
