@@ -10,3 +10,5 @@ stuck.drive(20, 20, "north")
 
 print(stuck.pos_x, stuck.pos_y)
 
+stuck.speed(20)
+

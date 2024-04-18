@@ -16,3 +16,9 @@ class car:
     
     def explode(self):
         self.is_alive = False
+    
+    def speed(self, speed: int):
+        print(f"I'm fast {speed}")
+
+bmw = car(5, 5, "north", True)
+bmw.honk()
