@@ -1,5 +1,5 @@
 class Konto:
-    def __init__(self, kontonummer: str, kontostand: float, inhaber: str) -> None:
+    def __init__(self, kontonummer: int, kontostand: float, inhaber: str) -> None:
         """
         Initialisiert ein Konto-Objekt mit Kontonummer, Kontostand und Inhaber.
 
@@ -19,9 +19,9 @@ class Konto:
         Args:
             betrag (float): Der einzuzahlende Betrag.
         """
-        self.kontostand += betrag
+        self.kontostand = self.kontostand + betrag
 
-    def abheben(self, betrag: float) -> None:
+    def abheben(self, betrag: float) -> bool:
         """
         Führt eine Abhebung vom Konto durch.
 
@@ -29,7 +29,7 @@ class Konto:
             betrag (float): Der abzuhebende Betrag.
         """
         if self.kontostand >= betrag:
-            self.kontostand -= betrag
+            self.kontostand = self.kontostand - betrag
             return True
         else:
             print("Nicht genug Geld auf dem Konto.")

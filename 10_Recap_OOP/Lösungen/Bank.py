@@ -78,12 +78,15 @@ class Bank:
         """
         k1 = object()
         k2 = object()
+        # kont1 suchen
         for konto1 in self.konten:
             if konto1.kontonummer == kontonummer1:
                 k1 = konto1
+        # konto2 suchen
         for konto2 in self.konten:
             if konto2.kontonummer == kontonummer2:
                 k2 = konto2
+        
         if k1.abheben(betrag):
             k2.einzahlen(betrag)
             return True
